@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+*.log
+.env
+.env.local
+.DS_Store
+
+# ArgoCD secrets — apply langsung ke cluster, jangan di-commit
+argocd/argocd-notifications-secret.yaml
