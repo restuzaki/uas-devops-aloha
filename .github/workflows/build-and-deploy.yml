@@ -49,7 +49,7 @@ jobs:
 
       - name: Update image tags in k8s-config repo
         run: |
-          git clone https://x-access-token:${{ secrets.CONFIG_REPO_TOKEN }}@github.com/bossawitilly/fullstack-app-dummy-k8s-config.git
+          git clone https://x-access-token:${{ secrets.CONFIG_REPO_TOKEN }}@github.com/restuzaki/k8s-config-aloha.git
           cd fullstack-app-dummy-k8s-config
 
           find . -name "*.yaml" -o -name "*.yml" | xargs grep -l "myapp-backend" | xargs sed -i "s|bossawit/myapp-backend:.*|bossawit/myapp-backend:${{ steps.vars.outputs.TAG }}|"
